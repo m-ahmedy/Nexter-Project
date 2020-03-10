@@ -1,10 +1,10 @@
 .features {
     grid-column: center-start / center-end;
 
-    margin: 15rem 0;
+    margin: $section-margin;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax($features-grid-minmax));
+    grid-template-columns: repeat(auto-fit, minmax($reponsive-grid-minmax));
     gap: $features-grid-gap;
     align-items: flex-start;
 }
