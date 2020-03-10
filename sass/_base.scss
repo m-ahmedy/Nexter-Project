@@ -14,6 +14,8 @@ $color-grey-dark-2: #6D5D4B;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
+// WHITESPACE VARIABLES
+$page-side-margins: 6rem;
 
 *,
 *::before,
@@ -33,4 +35,16 @@ body {
     color: $color-grey-dark-2;
     font-weight: 300;
     line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax($page-side-margins, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax($page-side-margins, 1fr) [full-end];
+
+    // TEST 
+    & > * {
+        padding: 40px;
+        font-size: 3rem;
+    }
 }
