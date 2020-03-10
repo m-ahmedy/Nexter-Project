@@ -1,4 +1,29 @@
 .features {
-    background-color: $color-grey-light-2;
     grid-column: center-start / center-end;
+
+    margin: 15rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($features-grid-minmax));
+    gap: $features-grid-gap;
+    align-items: flex-start;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: $feature-item-grid-gap;
+
+    &__icon {
+        fill: $color-primary;
+        width: $feature-icon-size;
+        height: $feature-icon-size;
+        grid-row: 1 / span 2;
+
+        transform: translateY( -25% );
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
 }
