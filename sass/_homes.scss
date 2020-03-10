@@ -5,6 +5,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax($reponsive-grid-minmax));
     gap: $homes-grid-gap;
+
+    @media screen and (max-width: $bp-small) {
+        margin: $section-margin-small;
+    }
 }
 
 .home {

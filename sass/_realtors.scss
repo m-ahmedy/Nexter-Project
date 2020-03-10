@@ -8,11 +8,28 @@
     justify-items: center;
     gap: 2rem;
 
+    @media screen and (max-width: $bp-medium) {
+        grid-row: realtors-start / realtors-end;
+        grid-column: 1 / -1;
+
+        padding: 5rem;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: min-content max-content;
         gap: 2rem 5vh;
         align-items: center;
+
+        @media screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(3, min-content max-content);
+            gap: 0 2vh;
+        }
+
+        @media screen and (max-width: $bp-small) {
+            grid-template-columns: min-content max-content;
+            gap: 2rem 5vh;
+        }
     }
 
     &__img {

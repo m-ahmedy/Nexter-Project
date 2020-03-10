@@ -3,6 +3,10 @@
 
     margin: $section-margin;
 
+    @media screen and (max-width: $bp-small) {
+        margin: $section-margin-small;
+    }
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax($reponsive-grid-minmax));
     gap: $features-grid-gap;
